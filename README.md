@@ -1,12 +1,44 @@
-# React + Vite
+# DataVinci Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## **Project Overview**
+This project is a **frontend assignment** for DataVinci, focusing on:
 
-Currently, two official plugins are available:
+- Implementing a **responsive layout** for Desktop and Mobile based on a Figma design.
+- Fixing a **nested checkbox component** with proper “Select All”, parent, and child checkbox logic.
+- Demonstrating the solution through a **Loom video walkthrough**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## **Tasks Implemented**
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### **Task 1: Responsive Layout Implementation**
+- Implemented the Figma design for **desktop (>1024px)** and **mobile (<768px)** views.
+- Features:
+  - Mobile-first responsive approach.
+  - Navigation bar that collapses into a hamburger menu on mobile.
+  - Content sections that adjust from multi-column (desktop) to single-column (mobile).
+  - Buttons, inputs, and text designed for accessibility (font size, contrast, keyboard navigation).
+- **Figma Reference:** [Click here](https://www.figma.com/design/KuTJztBgGAGZCKGbotH2nU/NZHC-UMF-MGO?node-id=1-2&t=rGX2823gt6Uba7uJ-0)
+
+### **Task 2: Nested Checkbox Component**
+- Fixed the logic for nested checkboxes:
+  - **Select All** checkbox selects/deselects all categories and items.
+  - **Parent categories** (Fruits, Vegetables) select/deselect all their children.
+  - **Child items** update the parent’s state: checked, unchecked, or indeterminate.
+- Implementation:
+  - Used a **tree-like data structure**.
+  - State propagates **downward** (parent → children) and **upward** (children → parent).
+- **Testing Scenarios:**
+  - Select “Select All” → all checkboxes checked.
+  - Deselect “Select All” → all checkboxes unchecked.
+  - Select “Fruits” → all fruits selected; “Vegetables” unchanged.
+  - Partial selection → parent shows **indeterminate** state.
+
+---
+
+## **Tech Stack**
+- **Frontend:** ReactJS  
+- **Styling:** CSS, Flexbox, CSS Grid  
+- **Tools:** VS Code, Chrome DevTools  
+- **Design Reference:** Figma
+
